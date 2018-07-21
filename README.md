@@ -9,4 +9,4 @@ shape ``(b, c, l, d, h, w)`` with ``k`` filters. The output tensor will be of
 shape ``(b, k, l', d', h', w')``. ``(l', d', h', w')`` will be smaller than
 ``(l, d, h, w)`` if a ``valid`` padding was chosen.
 
-(tensorflow1.3.0 is tested successful).
+tensorflow1.3.0 is tested successful.
