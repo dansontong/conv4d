@@ -130,7 +130,10 @@ def conv4d(
         for j in range(l_i):
 
             # add results to this output frame
-            out_frame = j - (i - l_k/2) - (l_i - l_o)/2
+            # out_frame = j - (i - l_k/2) - (l_i - l_o)/2 # fixed by dansontong
+            out_frame = j - (i - int(l_k/2)) - int((l_i - l_o)/2)
+            # flipped, key point: add different signal by differnt time step(like a stairs),
+            # refer to: www.zhihu.com/question/22298352, answer of 张俊博(zhangjunbo)
             if out_frame < 0 or out_frame >= l_o:
                 continue
 
